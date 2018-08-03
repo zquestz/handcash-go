@@ -2,6 +2,7 @@ package api
 
 import (
 	"encoding/json"
+	"errors"
 	"fmt"
 	"io/ioutil"
 	"net/http"
@@ -14,6 +15,10 @@ var network = "mainnet"
 // Response struct with the address.
 func Receive(handle string) (*Response, error) {
 	handle = strings.TrimLeft(handle, "$")
+
+	if handle == "" {
+		return nil, errors.New("handle is required")
+	}
 
 	url := fmt.Sprintf("%s/receivingAddress/%s", GetURL(), handle)
 
