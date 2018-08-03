@@ -1,3 +1,4 @@
+[![License][License-Image]][License-URL] [![ReportCard][ReportCard-Image]][ReportCard-URL]
 # handcash-go
 
 Go library for handcash's API @ http://handcash.io/api-docs
@@ -51,3 +52,8 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/zquest
 ## License
 
 This library is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+
+[License-URL]: http://opensource.org/licenses/MIT
+[License-Image]: https://img.shields.io/npm/l/express.svg
+[ReportCard-URL]: http://goreportcard.com/report/zquestz/handcash-go
+[ReportCard-Image]: https://goreportcard.com/badge/github.com/zquestz/handcash-go
