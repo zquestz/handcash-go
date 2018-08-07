@@ -89,6 +89,51 @@
         },
         "Body": "eyJyZWNlaXZpbmdBZGRyZXNzIjogIm14c3pxRHlhTkdGY21Ua1BqSjJCR1JwU1RDaGRWV2FOUFoiLCAicHVibGljS2V5IjogIjAzZDE5MzQzOWEyZjA2ZWQxMTIxYmU1YjRlNjEzODEzODZmZmVlNWVjNWJlYzMzZGFmMTdlMzNjY2IzNDYyMjc1MyJ9"
       }
+    },
+    {
+      "Request": {
+        "Method": "GET",
+        "URL": "https://test-api.handcash.io/api/receivingAddress/nope",
+        "Body": null
+      },
+      "Response": {
+        "Status": "200 OK",
+        "StatusCode": 200,
+        "ContentLength": 141,
+        "Header": {
+          "Access-Control-Allow-Headers": [
+            "Content-Type"
+          ],
+          "Access-Control-Allow-Methods": [
+            "GET POST PUT DELETE OPTIONS"
+          ],
+          "Access-Control-Allow-Origin": [
+            "*"
+          ],
+          "Connection": [
+            "keep-alive"
+          ],
+          "Content-Length": [
+            "141"
+          ],
+          "Content-Type": [
+            "application/json"
+          ],
+          "Date": [
+            "Tue, 07 Aug 2018 04:48:15 GMT"
+          ],
+          "Server": [
+            "gunicorn/19.7.1"
+          ],
+          "Via": [
+            "1.1 vegur"
+          ],
+          "X-Frame-Options": [
+            "SAMEORIGIN"
+          ]
+        },
+        "Body": ""
+      }
     }
   ]
 }

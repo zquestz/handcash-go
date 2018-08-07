@@ -12,7 +12,7 @@ import (
 func TestReceive(t *testing.T) {
 	validUser := "rjseibane"
 
-	vcr.Start(validUser, nil)
+	vcr.Start("handcash", nil)
 	defer vcr.Stop()
 
 	api.SetNetwork("mainnet")
@@ -47,6 +47,14 @@ func TestReceive(t *testing.T) {
 	testPubKey := "03d193439a2f06ed1121be5b4e61381386ffee5ec5bec33daf17e33ccb34622753"
 	if testResp.PublicKey != testPubKey {
 		t.Errorf("Invalid PubKey %s expected %s", testResp.PublicKey, testPubKey)
+	}
+
+	invalidUser := "nope"
+	expectedErr := "not found"
+
+	invalidResp, _ := api.Receive(invalidUser)
+	if invalidResp.Error != expectedErr {
+		t.Fatalf("Invalid Error %s expected %s", invalidResp.Error, expectedErr)
 	}
 }
 
