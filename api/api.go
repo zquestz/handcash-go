@@ -30,7 +30,7 @@ func Receive(handle string) (*Response, error) {
 		return nil, errors.New("handle is required")
 	}
 
-	url := fmt.Sprintf("%s/receivingAddress/%s", GetURL(), handle)
+	url := fmt.Sprintf("%s/receivingAddress/%s", getURL(), handle)
 
 	resp, err := http.Get(url)
 	if err != nil {
@@ -57,8 +57,8 @@ func Receive(handle string) (*Response, error) {
 	return r, nil
 }
 
-// GetURL gets the appropriate URL for the network.
-func GetURL() string {
+// getURL gets the appropriate URL for the network.
+func getURL() string {
 	switch network {
 	case MAINNET:
 		return mainURL
