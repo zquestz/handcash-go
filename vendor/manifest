@@ -1,0 +1,13 @@
+{
+	"version": 0,
+	"dependencies": [
+		{
+			"importpath": "github.com/ad2games/vcr-go",
+			"repository": "https://github.com/ad2games/vcr-go",
+			"vcs": "git",
+			"revision": "99813a945b7a47fce85a39a54d0b4b5b647c73ca",
+			"branch": "master",
+			"notests": true
+		}
+	]
+}
