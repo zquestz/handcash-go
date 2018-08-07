@@ -10,10 +10,10 @@ import (
 // TestReceive tests receiving handle data from
 // the HandCash API.
 func TestReceive(t *testing.T) {
-	validUser := "rjseibane"
-
 	vcr.Start("handcash", nil)
 	defer vcr.Stop()
+
+	validUser := "rjseibane"
 
 	api.SetNetwork("mainnet")
 
