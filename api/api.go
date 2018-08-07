@@ -9,7 +9,17 @@ import (
 	"strings"
 )
 
-var network = "mainnet"
+const (
+	// MAINNET is the main network.
+	MAINNET = "mainnet"
+	// TESTNET is the test network.
+	TESTNET = "testnet"
+
+	mainURL = "https://api.handcash.io/api"
+	testURL = "https://test-api.handcash.io/api"
+)
+
+var network = MAINNET
 
 // Receive takes a handle and returns the
 // Response struct with the address.
@@ -50,10 +60,10 @@ func Receive(handle string) (*Response, error) {
 // GetURL gets the appropriate URL for the network.
 func GetURL() string {
 	switch network {
-	case "mainnet":
-		return "https://api.handcash.io/api"
-	case "testnet":
-		return "https://test-api.handcash.io/api"
+	case MAINNET:
+		return mainURL
+	case TESTNET:
+		return testURL
 	}
 
 	return ""
@@ -63,10 +73,10 @@ func GetURL() string {
 // Valid values are mainnet/testnet.
 func SetNetwork(n string) error {
 	switch n {
-	case "mainnet":
-		network = "mainnet"
-	case "testnet":
-		network = "testnet"
+	case MAINNET:
+		network = MAINNET
+	case TESTNET:
+		network = TESTNET
 	default:
 		return fmt.Errorf("invalid network - %s", n)
 	}
