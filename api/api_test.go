@@ -15,6 +15,8 @@ func TestReceive(t *testing.T) {
 	vcr.Start(validUser, nil)
 	defer vcr.Stop()
 
+	api.SetNetwork("mainnet")
+
 	resp, _ := api.Receive(validUser)
 	if resp.Error != "" {
 		t.Fatalf("Valid user %s returned error %s", validUser, resp.Error)
